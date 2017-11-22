@@ -9,8 +9,8 @@ var jsonParser = bodyParser.json();
 var Engine = require('.').Engine;
 var MongoClient = require('mongodb').MongoClient;
 var cfg = require('./config');
-let apiClient = require('./database-data');
-let facts = {
+var apiClient = require('./database-data');
+var facts = {
     accountId: 'requestData'
 };
 
