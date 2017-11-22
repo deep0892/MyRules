@@ -89,12 +89,12 @@ app.post('/rules', jsonParser, function (req, res) {
             }
         });
 
-        var cursor = db.collection('rocketchat_livechat_Chatbot_Rules3').find({
+        var cursor = db.collection('Rules').find({
             "isActive": true,
-            "action": {
-                $in: [currentIntent, 'Common']
-            },
-            "AIAgentId": req.body.requestData.AIAgentId
+            // "action": {
+            //     $in: [currentIntent, 'Common']
+            // },
+            // "AIAgentId": req.body.requestData.AIAgentId
         }).sort({
             "priority": -1
         });
